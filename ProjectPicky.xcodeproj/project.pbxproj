@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D34A643216E8320008E6A4E /* ToppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D34A642216E8320008E6A4E /* ToppingsViewController.swift */; };
 		7DE645EF216CFD10000EEDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE645EE216CFD10000EEDE2 /* AppDelegate.swift */; };
-		7DE645F1216CFD10000EEDE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE645F0216CFD10000EEDE2 /* ViewController.swift */; };
+		7DE645F1216CFD10000EEDE2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */; };
 		7DE645F4216CFD10000EEDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE645F2216CFD10000EEDE2 /* Main.storyboard */; };
 		7DE645F6216CFD11000EEDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE645F5216CFD11000EEDE2 /* Assets.xcassets */; };
 		7DE645F9216CFD11000EEDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE645F7216CFD11000EEDE2 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D34A642216E8320008E6A4E /* ToppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingsViewController.swift; sourceTree = "<group>"; };
 		7DE645EB216CFD10000EEDE2 /* ProjectPicky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectPicky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE645EE216CFD10000EEDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DE645F0216CFD10000EEDE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7DE645F3216CFD10000EEDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DE645F5216CFD11000EEDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DE645F8216CFD11000EEDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,9 +76,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D34A640216E82CF008E6A4E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */,
+				7D34A642216E8320008E6A4E /* ToppingsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7D34A641216E82EC008E6A4E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7DE645F2216CFD10000EEDE2 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		7DE645E2216CFD10000EEDE2 = {
 			isa = PBXGroup;
 			children = (
+				7D34A641216E82EC008E6A4E /* Storyboards */,
+				7D34A640216E82CF008E6A4E /* View Controllers */,
 				7DE645ED216CFD10000EEDE2 /* ProjectPicky */,
 				7DE64602216CFD11000EEDE2 /* ProjectPickyTests */,
 				7DE6460D216CFD11000EEDE2 /* ProjectPickyUITests */,
@@ -98,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				7DE645EE216CFD10000EEDE2 /* AppDelegate.swift */,
-				7DE645F0216CFD10000EEDE2 /* ViewController.swift */,
-				7DE645F2216CFD10000EEDE2 /* Main.storyboard */,
 				7DE645F5216CFD11000EEDE2 /* Assets.xcassets */,
 				7DE645F7216CFD11000EEDE2 /* LaunchScreen.storyboard */,
 				7DE645FA216CFD11000EEDE2 /* Info.plist */,
@@ -256,7 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DE645F1216CFD10000EEDE2 /* ViewController.swift in Sources */,
+				7DE645F1216CFD10000EEDE2 /* HomeViewController.swift in Sources */,
+				7D34A643216E8320008E6A4E /* ToppingsViewController.swift in Sources */,
 				7DE645EF216CFD10000EEDE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
