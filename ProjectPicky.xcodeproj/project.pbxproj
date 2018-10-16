@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DA0B25121710EF5002747F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25021710EF5002747F5 /* Constants.swift */; };
+		7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25221710FEF002747F5 /* NetworkCall.swift */; };
+		7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B2552171168D002747F5 /* PizzaLocations.swift */; };
 		7DE645EF216CFD10000EEDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE645EE216CFD10000EEDE2 /* AppDelegate.swift */; };
 		7DE645F1216CFD10000EEDE2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */; };
 		7DE645F4216CFD10000EEDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE645F2216CFD10000EEDE2 /* Main.storyboard */; };
@@ -14,6 +17,8 @@
 		7DE645F9216CFD11000EEDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE645F7216CFD11000EEDE2 /* LaunchScreen.storyboard */; };
 		7DE64604216CFD11000EEDE2 /* ProjectPickyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE64603216CFD11000EEDE2 /* ProjectPickyTests.swift */; };
 		7DE6460F216CFD11000EEDE2 /* ProjectPickyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6460E216CFD11000EEDE2 /* ProjectPickyUITests.swift */; };
+		7DF9E3FA21762854004F05A1 /* pizza in Resources */ = {isa = PBXBuildFile; fileRef = 7DF9E3F921762854004F05A1 /* pizza */; };
+		7DF9E3FC217636D8004F05A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9E3FB217636D8004F05A1 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DA0B25021710EF5002747F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7DA0B25221710FEF002747F5 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
+		7DA0B2552171168D002747F5 /* PizzaLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLocations.swift; sourceTree = "<group>"; };
 		7DE645EB216CFD10000EEDE2 /* ProjectPicky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectPicky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE645EE216CFD10000EEDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,8 @@
 		7DE6460A216CFD11000EEDE2 /* ProjectPickyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectPickyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE6460E216CFD11000EEDE2 /* ProjectPickyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPickyUITests.swift; sourceTree = "<group>"; };
 		7DE64610216CFD11000EEDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF9E3F921762854004F05A1 /* pizza */ = {isa = PBXFileReference; lastKnownFileType = file; path = pizza; sourceTree = "<group>"; };
+		7DF9E3FB217636D8004F05A1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +100,28 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		7DA0B25421711632002747F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DA0B2552171168D002747F5 /* PizzaLocations.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7DE645E2216CFD10000EEDE2 = {
 			isa = PBXGroup;
 			children = (
+				7DF9E3FB217636D8004F05A1 /* LocationManager.swift */,
+				7DA0B25421711632002747F5 /* Models */,
+				7DA0B25221710FEF002747F5 /* NetworkCall.swift */,
+				7DA0B25021710EF5002747F5 /* Constants.swift */,
 				7D34A641216E82EC008E6A4E /* Storyboards */,
 				7D34A640216E82CF008E6A4E /* View Controllers */,
 				7DE645ED216CFD10000EEDE2 /* ProjectPicky */,
 				7DE64602216CFD11000EEDE2 /* ProjectPickyTests */,
 				7DE6460D216CFD11000EEDE2 /* ProjectPickyUITests */,
 				7DE645EC216CFD10000EEDE2 /* Products */,
+				7DF9E3F921762854004F05A1 /* pizza */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +270,7 @@
 			files = (
 				7DE645F9216CFD11000EEDE2 /* LaunchScreen.storyboard in Resources */,
 				7DE645F6216CFD11000EEDE2 /* Assets.xcassets in Resources */,
+				7DF9E3FA21762854004F05A1 /* pizza in Resources */,
 				7DE645F4216CFD10000EEDE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +298,10 @@
 			files = (
 				7DE645F1216CFD10000EEDE2 /* HomeViewController.swift in Sources */,
 				7DE645EF216CFD10000EEDE2 /* AppDelegate.swift in Sources */,
+				7DF9E3FC217636D8004F05A1 /* LocationManager.swift in Sources */,
+				7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */,
+				7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */,
+				7DA0B25121710EF5002747F5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
