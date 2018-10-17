@@ -15,7 +15,12 @@ class NetworkCall {
     
     func placesURL() -> URL {
 
-        let urlString = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=pizza%20restaurant&inputtype=textquery&fields=formatted_address,name,opening_hours&locationbias=circle:10000@42.3314,-83.0458&key=\(placesApi.apiKey)"
+        //only returns one result 
+        let urlString = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=pizza%20restaurant&inputtype=textquery&fields=formatted_address,name,opening_hours&locationbias=circle:5000@42.3314,-83.0458&key=\(placesApi.apiKey)"
+        
+        //Trying to receive more than one result
+//       let urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-42.3314,-83.0458&radius=1500&type=restaurant&keyword=pizza&key=\(placesApi.apiKey)"
+        
         let url = URL(string: urlString)
         return url!
     }

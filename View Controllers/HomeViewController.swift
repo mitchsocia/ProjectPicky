@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     var networkCall = NetworkCall()
     var locations: PizzaLocations?
+    var currentCandidateIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +28,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var locationAddressLabel: UILabel!
     
-    @IBAction func displayButtonTapped(_ sender: Any) {
-        locationNameLabel.text = locations?.candidates.first?.name
-        locationAddressLabel.text = locations?.candidates.first?.formatted_address
+    @IBAction func displayButtonTapped(_ sender: UIButton) {
+        guard let locations = locations else {
+            return
+            
+        }
+        if currentCandidateIndex == nil {
+            currentCandidateIndex = 0
+        } else {
+            currentCandidateIndex = (currentCandidateIndex! + 1) % locations.candidates.count
+        }
+        locationNameLabel.text = locations.candidates[currentCandidateIndex ?? 0].name
+        locationAddressLabel.text = locations.candidates[currentCandidateIndex ?? 0].formatted_address
+        sender.setTitle("Try Again", for: .normal)
     }
 }
+
 

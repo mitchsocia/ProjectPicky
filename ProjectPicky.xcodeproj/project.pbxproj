@@ -19,6 +19,7 @@
 		7DE6460F216CFD11000EEDE2 /* ProjectPickyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6460E216CFD11000EEDE2 /* ProjectPickyUITests.swift */; };
 		7DF9E3FA21762854004F05A1 /* pizza in Resources */ = {isa = PBXBuildFile; fileRef = 7DF9E3F921762854004F05A1 /* pizza */; };
 		7DF9E3FC217636D8004F05A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9E3FB217636D8004F05A1 /* LocationManager.swift */; };
+		7DFF03CF217784620029E41A /* ToppingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF03CE217784620029E41A /* ToppingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7DE64610216CFD11000EEDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DF9E3F921762854004F05A1 /* pizza */ = {isa = PBXFileReference; lastKnownFileType = file; path = pizza; sourceTree = "<group>"; };
 		7DF9E3FB217636D8004F05A1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7DFF03CE217784620029E41A /* ToppingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */,
+				7DFF03CE217784620029E41A /* ToppingsTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				7DE645EF216CFD10000EEDE2 /* AppDelegate.swift in Sources */,
 				7DF9E3FC217636D8004F05A1 /* LocationManager.swift in Sources */,
 				7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */,
+				7DFF03CF217784620029E41A /* ToppingsTableViewController.swift in Sources */,
 				7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */,
 				7DA0B25121710EF5002747F5 /* Constants.swift in Sources */,
 			);
