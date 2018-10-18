@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         locations = networkCall.parse(data: networkCall.performStoreRequest(with: networkCall.placesURL())!)
         locations?.candidates.first?.name
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
+        navigationController?.navigationBar.isTranslucent = true
         
         // Do any additional setup after loading the view, typically from a nib.
     }

@@ -8,7 +8,14 @@
 
 import UIKit
 
-var toppings = ["Vegetables": ["Tomato", "Onion", "Spinach", "Green Olive", "Black Olive", "Mild Pepper", "Green Pepper", "Mushroom"], "Meats": ["Pepperoni", "Ham", "Bacon", "Sausage", "Anchovie", "Chicken"], "Misc.": ["Pineapple", "Pickle"]]
+var toppings = [
+    
+    "Vegetables": ["Tomato", "Onion", "Spinach", "Green Olive", "Black Olive", "Mild Pepper", "Green Pepper", "Mushroom"],
+    "Meats": ["Pepperoni", "Ham", "Bacon", "Sausage", "Anchovie", "Chicken"],
+    "Misc.": ["Pineapple", "Pickle"]
+]
+
+var toppingsChoice = [String]()
 
 struct Objects {
     
@@ -24,9 +31,11 @@ class ToppingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
+//        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)]
         
         for (key, value) in toppings {
-            print("\(key) -> \(value)")
+//            print("\(key) -> \(value)")
             objectArray.append(Objects(sectionName: key, sectionObjects: value))
         }
     }
@@ -35,7 +44,7 @@ class ToppingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToppingsItem", for: indexPath)
         cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
         
-        cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
+//        cell.contentView.backgroundColor = #colorLiteral(red: 0.9397469163, green: 1, blue: 0.596360743, alpha: 1)
         
         return cell
     }
@@ -63,9 +72,14 @@ class ToppingsTableViewController: UITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
+                
+                toppingsChoice.append("\(toppings)")
+                print(toppingsChoice)
+                
             } else {
                 cell.accessoryType = .none
             }
+            
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
