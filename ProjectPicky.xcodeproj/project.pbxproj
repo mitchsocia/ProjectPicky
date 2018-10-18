@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D00E8A721790D2300431364 /* ToppingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E8A621790D2300431364 /* ToppingCategory.swift */; };
 		7DA0B25121710EF5002747F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25021710EF5002747F5 /* Constants.swift */; };
 		7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25221710FEF002747F5 /* NetworkCall.swift */; };
 		7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B2552171168D002747F5 /* PizzaLocations.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D00E8A621790D2300431364 /* ToppingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingCategory.swift; sourceTree = "<group>"; };
 		7DA0B25021710EF5002747F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DA0B25221710FEF002747F5 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
 		7DA0B2552171168D002747F5 /* PizzaLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLocations.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				7DA0B2552171168D002747F5 /* PizzaLocations.swift */,
+				7D00E8A621790D2300431364 /* ToppingCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				7DF9E3FC217636D8004F05A1 /* LocationManager.swift in Sources */,
 				7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */,
 				7DFF03CF217784620029E41A /* ToppingsTableViewController.swift in Sources */,
+				7D00E8A721790D2300431364 /* ToppingCategory.swift in Sources */,
 				7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */,
 				7DA0B25121710EF5002747F5 /* Constants.swift in Sources */,
 			);

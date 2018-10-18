@@ -8,11 +8,10 @@
 
 import UIKit
 
-var toppings = [
-    
-    "Vegetables": ["Tomato", "Onion", "Spinach", "Green Olive", "Black Olive", "Mild Pepper", "Green Pepper", "Mushroom"],
-    "Meats": ["Pepperoni", "Ham", "Bacon", "Sausage", "Anchovie", "Chicken"],
-    "Misc.": ["Pineapple", "Pickle"]
+var toppingsCategories = [
+    ToppingCategory(categoryName: "Vegetables", toppings: ["Tomato", "Onion", "Spinach", "Green Olive", "Black Olive", "Mild Pepper", "Green Pepper", "Mushroom"]),
+    ToppingCategory(categoryName: "Meats", toppings: ["Pepperoni", "Ham", "Bacon", "Sausage", "Anchovie", "Chicken"]),
+    ToppingCategory(categoryName: "Misc.", toppings: ["Pineapple", "Pickle"])
 ]
 
 var toppingsChoice = [String]()
@@ -25,36 +24,35 @@ struct Objects {
 
 class ToppingsTableViewController: UITableViewController {
     
-    var objectArray = [Objects]()
     let SectionHeaderHeight: CGFloat = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
-//        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
-//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)]
-        
-        for (key, value) in toppings {
-//            print("\(key) -> \(value)")
-            objectArray.append(Objects(sectionName: key, sectionObjects: value))
-        }
+
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToppingsItem", for: indexPath)
-        cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
+        let toppingForCell = toppingsCategories[indexPath.section].toppings[indexPath.row]
+        cell.textLabel?.text = toppingForCell
         
+        if toppingsChoice.contains(toppingForCell) {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
 //        cell.contentView.backgroundColor = #colorLiteral(red: 0.9397469163, green: 1, blue: 0.596360743, alpha: 1)
         
         return cell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return objectArray.count
+        return toppingsCategories.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objectArray[section].sectionObjects.count
+        return toppingsCategories[section].toppings.count
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -64,7 +62,7 @@ class ToppingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return objectArray[section].sectionName
+        return toppingsCategories[section].categoryName
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,15 +71,17 @@ class ToppingsTableViewController: UITableViewController {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
                 
-                toppingsChoice.append("\(toppings)")
-                print(toppingsChoice)
+                toppingsChoice.append(toppingsCategories[indexPath.section].toppings[indexPath.row])
                 
             } else {
                 cell.accessoryType = .none
+                toppingsChoice.removeAll { (string) -> Bool in
+                    string == toppingsCategories[indexPath.section].toppings[indexPath.row]
+                }
             }
             
         }
-        
+        print(toppingsChoice)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
