@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D00E8A721790D2300431364 /* ToppingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E8A621790D2300431364 /* ToppingCategory.swift */; };
+		7D00E8A92179225200431364 /* PizzaPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E8A82179225200431364 /* PizzaPickerViewController.swift */; };
+		7D00E8AD2179271D00431364 /* donePizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E8AC2179271D00431364 /* donePizza.png */; };
 		7DA0B25121710EF5002747F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25021710EF5002747F5 /* Constants.swift */; };
 		7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25221710FEF002747F5 /* NetworkCall.swift */; };
 		7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B2552171168D002747F5 /* PizzaLocations.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		7D00E8A621790D2300431364 /* ToppingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingCategory.swift; sourceTree = "<group>"; };
+		7D00E8A82179225200431364 /* PizzaPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPickerViewController.swift; sourceTree = "<group>"; };
+		7D00E8AC2179271D00431364 /* donePizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donePizza.png; sourceTree = "<group>"; };
 		7DA0B25021710EF5002747F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DA0B25221710FEF002747F5 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
 		7DA0B2552171168D002747F5 /* PizzaLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLocations.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */,
 				7DFF03CE217784620029E41A /* ToppingsTableViewController.swift */,
+				7D00E8A82179225200431364 /* PizzaPickerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				7DE6460D216CFD11000EEDE2 /* ProjectPickyUITests */,
 				7DE645EC216CFD10000EEDE2 /* Products */,
 				7DF9E3F921762854004F05A1 /* pizza */,
+				7D00E8AC2179271D00431364 /* donePizza.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +284,7 @@
 				7DE645F6216CFD11000EEDE2 /* Assets.xcassets in Resources */,
 				7DF9E3FA21762854004F05A1 /* pizza in Resources */,
 				7DE645F4216CFD10000EEDE2 /* Main.storyboard in Resources */,
+				7D00E8AD2179271D00431364 /* donePizza.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 				7D00E8A721790D2300431364 /* ToppingCategory.swift in Sources */,
 				7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */,
 				7DA0B25121710EF5002747F5 /* Constants.swift in Sources */,
+				7D00E8A92179225200431364 /* PizzaPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

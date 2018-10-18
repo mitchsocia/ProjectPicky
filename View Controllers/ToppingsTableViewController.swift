@@ -29,7 +29,7 @@ class ToppingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
-
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,8 +42,7 @@ class ToppingsTableViewController: UITableViewController {
         } else {
             cell.accessoryType = .none
         }
-//        cell.contentView.backgroundColor = #colorLiteral(red: 0.9397469163, green: 1, blue: 0.596360743, alpha: 1)
-        
+
         return cell
     }
     
@@ -85,5 +84,8 @@ class ToppingsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+    @IBAction func toppingsPickerButtonPressed(_ sender: UIButton) {
+      
+    }
+
 }
