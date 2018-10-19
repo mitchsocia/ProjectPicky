@@ -84,8 +84,13 @@ class ToppingsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+//    func randomPizzaToppings() {
+//        toppingsChoice.randomElement()
+//    }
+
+    
     @IBAction func toppingsPickerButtonPressed(_ sender: UIButton) {
-      
+//    randomPizzaToppings()
     }
 
 }
