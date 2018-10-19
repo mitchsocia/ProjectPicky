@@ -21,5 +21,10 @@ class PizzaPickerViewController: UIViewController {
     
     @IBOutlet weak var displayPizzaResult2: UILabel!
     
+    @IBAction func tryAgainButton(_ sender: UIButton) {
+        displayPizzaResult.text = toppingsChoice.randomElement()
+        displayPizzaResult2.text = toppingsChoice.randomElement()
+        
+    }
     
 }
