@@ -48,6 +48,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-Na-4IB">
                                 <rect key="frame" x="87" y="105" width="240" height="153"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxP-hY-V3X">
+                                <rect key="frame" x="119" y="748" width="177" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="22"/>
+                                <state key="normal" title="Favorites">
+                                    <color key="titleColor" red="0.97546884150000002" green="0.98856920000000004" blue="0.62473414019999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="favoritesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPC-HX-vhl"/>
+                                    <segue destination="6yw-cw-GA5" kind="show" id="kT1-9i-IRL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98856920003890991" green="0.93114924430847168" blue="0.48224550485610962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -117,6 +130,21 @@
             </objects>
             <point key="canvasLocation" x="632" y="156"/>
         </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="qK8-4H-kCd">
+            <objects>
+                <viewController id="6yw-cw-GA5" customClass="FavoritesViewController" customModule="ProjectPicky" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dbf-Hb-18B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dnN-Fh-7IE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pir-0j-wPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="877"/>
+        </scene>
         <!--Pizza Picker View Controller-->
         <scene sceneID="BBj-uM-OxM">
             <objects>
@@ -168,6 +196,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-1x-G50">
+                                <rect key="frame" x="168" y="732" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorites"/>
+                                <connections>
+                                    <action selector="favoritesButtonPressed:" destination="mwF-mx-2g4" eventType="touchUpInside" id="oUD-l9-byb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98856920000000004" green="0.93114924430000001" blue="0.48224550490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="g0g-wT-j7C"/>

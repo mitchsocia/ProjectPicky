@@ -8,15 +8,22 @@
 
 import UIKit
 
-class PizzaPickerViewController: UIViewController {
-
+class PizzaPickerViewController: UIViewController, HomeViewControllerDelegate {
+    func didFinishPassing(controller: HomeViewController, favoritePizzas: [FavoritePizza]) {
+        controller.delegate = self
+        controller.favorites = favoritePizzas
+        print("YO")
+    }
+    
+    var favoritePizzas: [FavoritePizza] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.displayPizzaResult.text = toppingsChoice.randomElement()
         self.displayPizzaResult2.text = toppingsChoice.randomElement()
     }
-
+    
     @IBOutlet weak var displayPizzaResult: UILabel!
     
     @IBOutlet weak var displayPizzaResult2: UILabel!
@@ -27,4 +34,10 @@ class PizzaPickerViewController: UIViewController {
         
     }
     
+    @IBAction func favoritesButtonPressed(_ sender: UIButton) {
+        let pizza = FavoritePizza.init(toppings: [displayPizzaResult.text!, displayPizzaResult2.text!])
+        favoritePizzas.append(pizza)
+        print(favoritePizzas)
+    }
+
 }
