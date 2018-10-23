@@ -10,7 +10,7 @@
 		7D00E8A721790D2300431364 /* ToppingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E8A621790D2300431364 /* ToppingCategory.swift */; };
 		7D00E8A92179225200431364 /* PizzaPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E8A82179225200431364 /* PizzaPickerViewController.swift */; };
 		7D00E8AD2179271D00431364 /* donePizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E8AC2179271D00431364 /* donePizza.png */; };
-		7D58032C217E23D000D17545 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58032B217E23D000D17545 /* FavoritesViewController.swift */; };
+		7D38BCDC217F9F7C00523018 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38BCDB217F9F7C00523018 /* FavoritesTableViewController.swift */; };
 		7D58032E217E27EE00D17545 /* FavoritePizzas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58032D217E27EE00D17545 /* FavoritePizzas.swift */; };
 		7DA0B25121710EF5002747F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25021710EF5002747F5 /* Constants.swift */; };
 		7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0B25221710FEF002747F5 /* NetworkCall.swift */; };
@@ -49,7 +49,7 @@
 		7D00E8A621790D2300431364 /* ToppingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingCategory.swift; sourceTree = "<group>"; };
 		7D00E8A82179225200431364 /* PizzaPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPickerViewController.swift; sourceTree = "<group>"; };
 		7D00E8AC2179271D00431364 /* donePizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donePizza.png; sourceTree = "<group>"; };
-		7D58032B217E23D000D17545 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		7D38BCDB217F9F7C00523018 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		7D58032D217E27EE00D17545 /* FavoritePizzas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePizzas.swift; sourceTree = "<group>"; };
 		7DA0B25021710EF5002747F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DA0B25221710FEF002747F5 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				7DE645F0216CFD10000EEDE2 /* HomeViewController.swift */,
 				7DFF03CE217784620029E41A /* ToppingsTableViewController.swift */,
 				7D00E8A82179225200431364 /* PizzaPickerViewController.swift */,
-				7D58032B217E23D000D17545 /* FavoritesViewController.swift */,
+				7D38BCDB217F9F7C00523018 /* FavoritesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -324,10 +324,10 @@
 				7DF9E3FC217636D8004F05A1 /* LocationManager.swift in Sources */,
 				7DA0B25321710FEF002747F5 /* NetworkCall.swift in Sources */,
 				7DFF03CF217784620029E41A /* ToppingsTableViewController.swift in Sources */,
+				7D38BCDC217F9F7C00523018 /* FavoritesTableViewController.swift in Sources */,
 				7D00E8A721790D2300431364 /* ToppingCategory.swift in Sources */,
 				7DA0B2562171168D002747F5 /* PizzaLocations.swift in Sources */,
 				7DA0B25121710EF5002747F5 /* Constants.swift in Sources */,
-				7D58032C217E23D000D17545 /* FavoritesViewController.swift in Sources */,
 				7D58032E217E27EE00D17545 /* FavoritePizzas.swift in Sources */,
 				7D00E8A92179225200431364 /* PizzaPickerViewController.swift in Sources */,
 			);

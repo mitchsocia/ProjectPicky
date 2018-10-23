@@ -8,14 +8,10 @@
 
 import UIKit
 
-class PizzaPickerViewController: UIViewController, HomeViewControllerDelegate {
-    func didFinishPassing(controller: HomeViewController, favoritePizzas: [FavoritePizza]) {
-        controller.delegate = self
-        controller.favorites = favoritePizzas
-        print("YO")
-    }
-    
+class PizzaPickerViewController: UIViewController {
+
     var favoritePizzas: [FavoritePizza] = []
+    var favoritePizza = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +30,17 @@ class PizzaPickerViewController: UIViewController, HomeViewControllerDelegate {
         
     }
     
-    @IBAction func favoritesButtonPressed(_ sender: UIButton) {
-        let pizza = FavoritePizza.init(toppings: [displayPizzaResult.text!, displayPizzaResult2.text!])
-        favoritePizzas.append(pizza)
-        print(favoritePizzas)
+    @IBAction func addToFavoritesButtonPressed(_ sender: UIButton) {
+        let pizza = "\(displayPizzaResult.text!), \(displayPizzaResult2.text!)"
+        favoritePizza = pizza
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAddedFavorites" {
+            let favoritesViewController = segue.destination as! FavoritesTableViewController
+            favoritesViewController.favoritePizzas.append(favoritePizza)
+        }
     }
 
 }

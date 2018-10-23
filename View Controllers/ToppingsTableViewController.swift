@@ -25,6 +25,7 @@ struct Objects {
 class ToppingsTableViewController: UITableViewController {
     
     let SectionHeaderHeight: CGFloat = 50
+    var favorites: [FavoritePizza] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,13 +84,8 @@ class ToppingsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-//    func randomPizzaToppings() {
-//        toppingsChoice.randomElement()
-//    }
-
-    
     @IBAction func toppingsPickerButtonPressed(_ sender: UIButton) {
-//    randomPizzaToppings()
+
     }
 
 }

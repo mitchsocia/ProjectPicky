@@ -10,5 +10,5 @@ import Foundation
 
 struct FavoritePizza {
     
-    var toppings: [String]
+    var toppings: String
 }

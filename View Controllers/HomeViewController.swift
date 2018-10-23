@@ -8,17 +8,12 @@
 
 import UIKit
 
-protocol HomeViewControllerDelegate: class {
-    func didFinishPassing(controller: HomeViewController, favoritePizzas: [FavoritePizza])
-}
-
 class HomeViewController: UIViewController {
 
     var networkCall = NetworkCall()
     var locations: PizzaLocations?
     var currentCandidateIndex: Int?
     var favorites: [FavoritePizza] = []
-    weak var delegate: HomeViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +31,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var locationAddressLabel: UILabel!
     
     @IBAction func favoritesButtonTapped(_ sender: UIButton) {
-        delegate?.didFinishPassing(controller: self, favoritePizzas: favorites)
     }
     
     
@@ -54,6 +48,22 @@ class HomeViewController: UIViewController {
         locationAddressLabel.text = locations.candidates[currentCandidateIndex ?? 0].formatted_address
         sender.setTitle("Try Again", for: .normal)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ShowFavorites" {
+//            let favoritesViewController = segue.destination as! FavoritesViewController
+//            favoritesViewController.favorites = favorites
+//        }
+//
+//    }
+    
 }
 
-
+//extension HomeViewController: PizzaPickerViewControllerDelegate {
+//    func pizzaPickerViewController(_ pizzaPickerViewController: PizzaPickerViewController, didAddFavorite favorite: FavoritePizza) {
+//        pizzaPickerViewController.delegate = self
+//        print("In home view controller delegate \(favorite)")
+//    }
+//
+//
+//}

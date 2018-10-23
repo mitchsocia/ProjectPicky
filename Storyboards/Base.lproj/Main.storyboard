@@ -57,8 +57,7 @@
                                     <color key="titleColor" red="0.97546884150000002" green="0.98856920000000004" blue="0.62473414019999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="favoritesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPC-HX-vhl"/>
-                                    <segue destination="6yw-cw-GA5" kind="show" id="kT1-9i-IRL"/>
+                                    <segue destination="RPS-l3-NEZ" kind="show" id="9tp-xG-U40"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,7 +92,7 @@
         <!--Toppings Table View Controller-->
         <scene sceneID="uj2-MK-qPR">
             <objects>
-                <tableViewController id="CAp-a0-0f0" customClass="ToppingsTableViewController" customModule="ProjectPicky" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ToppingsList" id="CAp-a0-0f0" customClass="ToppingsTableViewController" customModule="ProjectPicky" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H9D-RX-Rrd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,22 +127,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyp-34-u49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="156"/>
+            <point key="canvasLocation" x="642" y="-322"/>
         </scene>
-        <!--Favorites View Controller-->
-        <scene sceneID="qK8-4H-kCd">
+        <!--Favorites Table View Controller-->
+        <scene sceneID="THQ-b1-lIS">
             <objects>
-                <viewController id="6yw-cw-GA5" customClass="FavoritesViewController" customModule="ProjectPicky" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dbf-Hb-18B">
+                <tableViewController id="RPS-l3-NEZ" customClass="FavoritesTableViewController" customModule="ProjectPicky" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tXX-d7-b9h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="dnN-Fh-7IE"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pir-0j-wPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteItem" id="gYF-G8-gpa">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gYF-G8-gpa" id="xOj-au-fYh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RPS-l3-NEZ" id="iR7-wa-yoX"/>
+                            <outlet property="delegate" destination="RPS-l3-NEZ" id="8dE-Rc-AWv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wty-lN-XY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="877"/>
+            <point key="canvasLocation" x="641" y="806"/>
         </scene>
         <!--Pizza Picker View Controller-->
         <scene sceneID="BBj-uM-OxM">
@@ -178,17 +190,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCn-ue-azY">
-                                <rect key="frame" x="126" y="770" width="183" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="40"/>
-                                <color key="tintColor" red="0.98856920000000004" green="0.93114924430000001" blue="0.48224550490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="try again"/>
-                                <connections>
-                                    <action selector="tryAgainButton:" destination="mwF-mx-2g4" eventType="touchUpInside" id="NJN-lV-L1a"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhS-af-Nud">
                                 <rect key="frame" x="20" y="585" width="374" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -197,11 +198,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-1x-G50">
-                                <rect key="frame" x="168" y="732" width="99" height="30"/>
+                                <rect key="frame" x="162" y="656" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Favorites"/>
+                                <state key="normal" title="Add to Favorites"/>
                                 <connections>
-                                    <action selector="favoritesButtonPressed:" destination="mwF-mx-2g4" eventType="touchUpInside" id="oUD-l9-byb"/>
+                                    <action selector="addToFavoritesButtonPressed:" destination="mwF-mx-2g4" eventType="touchUpInside" id="gTg-yw-XlY"/>
+                                    <segue destination="RPS-l3-NEZ" kind="show" identifier="ShowAddedFavorites" id="I3o-Qx-q3Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-ee-SoY">
+                                <rect key="frame" x="162" y="776" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ReturnHome" id="IxX-qQ-ljQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCn-ue-azY">
+                                <rect key="frame" x="126" y="694" width="183" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="40"/>
+                                <color key="tintColor" red="0.98856920000000004" green="0.93114924430000001" blue="0.48224550490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="try again"/>
+                                <connections>
+                                    <action selector="tryAgainButton:" destination="mwF-mx-2g4" eventType="touchUpInside" id="NJN-lV-L1a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -240,5 +261,9 @@
         <image name="donePizza.png" width="624" height="596"/>
         <image name="pizza" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="I3o-Qx-q3Q"/>
+        <segue reference="IxX-qQ-ljQ"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.41209946069999998" green="0.22343137690000001" blue="0.066320348160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
