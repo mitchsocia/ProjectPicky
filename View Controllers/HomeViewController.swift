@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
         navigationController?.navigationBar.isTranslucent = true
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     @IBOutlet weak var mainIconImage: UIImageView!
@@ -49,21 +48,6 @@ class HomeViewController: UIViewController {
         sender.setTitle("Try Again", for: .normal)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ShowFavorites" {
-//            let favoritesViewController = segue.destination as! FavoritesViewController
-//            favoritesViewController.favorites = favorites
-//        }
-//
-//    }
     
 }
 
-//extension HomeViewController: PizzaPickerViewControllerDelegate {
-//    func pizzaPickerViewController(_ pizzaPickerViewController: PizzaPickerViewController, didAddFavorite favorite: FavoritePizza) {
-//        pizzaPickerViewController.delegate = self
-//        print("In home view controller delegate \(favorite)")
-//    }
-//
-//
-//}

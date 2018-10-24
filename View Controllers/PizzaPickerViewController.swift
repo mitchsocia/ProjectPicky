@@ -9,7 +9,7 @@
 import UIKit
 
 class PizzaPickerViewController: UIViewController {
-
+    
     var favoritePizzas: [FavoritePizza] = []
     var favoritePizza = ""
     
@@ -42,5 +42,5 @@ class PizzaPickerViewController: UIViewController {
             favoritesViewController.favoritePizzas.append(favoritePizza)
         }
     }
-
+    
 }

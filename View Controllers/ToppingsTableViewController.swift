@@ -42,7 +42,7 @@ class ToppingsTableViewController: UITableViewController {
         } else {
             cell.accessoryType = .none
         }
-
+        
         return cell
     }
     
@@ -85,7 +85,7 @@ class ToppingsTableViewController: UITableViewController {
     }
     
     @IBAction func toppingsPickerButtonPressed(_ sender: UIButton) {
-
+        
     }
-
+    
 }
