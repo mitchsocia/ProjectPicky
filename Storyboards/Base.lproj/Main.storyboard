@@ -22,20 +22,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-ID-rcA">
-                                <rect key="frame" x="20" y="455" width="349" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-ID-rcA">
+                                <rect key="frame" x="20" y="737" width="374" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-TC-wc4">
-                                <rect key="frame" x="20" y="385" width="349" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-TC-wc4">
+                                <rect key="frame" x="20" y="660" width="374" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Xn-ZdX">
-                                <rect key="frame" x="45" y="299" width="324" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Xn-ZdX">
+                                <rect key="frame" x="66" y="590" width="282" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="22"/>
                                 <state key="normal" title="Find the nearest pizza place!">
@@ -45,15 +48,16 @@
                                     <action selector="displayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="03b-3c-pGD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-Na-4IB">
-                                <rect key="frame" x="87" y="105" width="240" height="153"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-Na-4IB">
+                                <rect key="frame" x="-17" y="-27" width="442" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxP-hY-V3X">
-                                <rect key="frame" x="119" y="748" width="177" height="51"/>
+                                <rect key="frame" x="119" y="509" width="177" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="22"/>
-                                <state key="normal" title="Favorites">
+                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="30"/>
+                                <state key="normal" title="favorites">
                                     <color key="titleColor" red="0.97546884150000002" green="0.98856920000000004" blue="0.62473414019999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -62,13 +66,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98856920003890991" green="0.93114924430847168" blue="0.48224550485610962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cc-Xn-ZdX" secondAttribute="trailing" constant="45" id="7ZH-P1-inv"/>
-                            <constraint firstItem="2cc-Xn-ZdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="Fgd-cd-aHE"/>
-                            <constraint firstItem="VV2-ID-rcA" firstAttribute="top" secondItem="s7a-TC-wc4" secondAttribute="bottom" constant="17" id="IYb-46-WDx"/>
-                            <constraint firstItem="2cc-Xn-ZdX" firstAttribute="top" secondItem="cv4-Na-4IB" secondAttribute="bottom" constant="41" id="KDw-mB-Xfa"/>
-                            <constraint firstItem="s7a-TC-wc4" firstAttribute="top" secondItem="2cc-Xn-ZdX" secondAttribute="bottom" constant="40" id="blz-iE-S7K"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="dDg-hk-FRG">
@@ -198,24 +195,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-1x-G50">
-                                <rect key="frame" x="162" y="656" width="111" height="30"/>
+                                <rect key="frame" x="20" y="781" width="154" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add to Favorites"/>
+                                <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="20"/>
+                                <color key="tintColor" red="0.98856920000000004" green="0.93114924430000001" blue="0.48224550490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="add to favorites"/>
                                 <connections>
                                     <action selector="addToFavoritesButtonPressed:" destination="mwF-mx-2g4" eventType="touchUpInside" id="gTg-yw-XlY"/>
                                     <segue destination="RPS-l3-NEZ" kind="show" identifier="ShowAddedFavorites" id="I3o-Qx-q3Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-ee-SoY">
-                                <rect key="frame" x="162" y="776" width="111" height="30"/>
+                                <rect key="frame" x="240" y="781" width="154" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Home"/>
+                                <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="25"/>
+                                <color key="tintColor" red="0.98856920000000004" green="0.93114924430000001" blue="0.48224550490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="go home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ReturnHome" id="IxX-qQ-ljQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCn-ue-azY">
-                                <rect key="frame" x="126" y="694" width="183" height="60"/>
+                                <rect key="frame" x="116" y="686" width="183" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86715024709999999" green="0.4211627543" blue="0.3489862084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="CoolveticaRg-Regular" family="Coolvetica" pointSize="40"/>
@@ -262,7 +265,8 @@
         <image name="pizza" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I3o-Qx-q3Q"/>
+        <segue reference="bfI-nx-nBk"/>
+        <segue reference="9tp-xG-U40"/>
         <segue reference="IxX-qQ-ljQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.41209946069999998" green="0.22343137690000001" blue="0.066320348160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
