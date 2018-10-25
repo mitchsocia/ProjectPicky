@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FavoritePizza {
+struct FavoritePizza: Codable {
     
     var toppings: String
 }
