@@ -19,7 +19,7 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPizzas()
-        print("HELLLLOOOOO")
+//        useLargeTitles()
         //        print("Documents folder is \(documentsDirectory())")
         //        print("Data file path is \(dataFilePath())")
     }
@@ -33,8 +33,11 @@ class FavoritesTableViewController: UITableViewController {
         cell.textLabel?.text = favoritePizzas[indexPath.row].toppings
         
         return cell
-        
     }
+    
+//    private func useLargeTitles() {
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//    }
     
 }
 
@@ -50,6 +53,16 @@ extension FavoritesTableViewController {
         return documentsDirectory().appendingPathComponent("Favorites.plist")
     }
     
+    func savePizzas() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(favoritePizzas)
+            try data.write(to: dataFilePath(), options: Data.WritingOptions.atomic)
+        } catch {
+            print("Error encoding item array")
+        }
+    }
+    
     func loadPizzas() {
         let path = dataFilePath()
         if let data = try? Data(contentsOf: path) {
@@ -60,6 +73,24 @@ extension FavoritesTableViewController {
                 print("Error decoding item array")
             }
         }
+    }
+    
+    private func swipeToDelete(indexPath: IndexPath) {
+        favoritePizzas.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            swipeToDelete(indexPath: indexPath)
+            
+        }
+        savePizzas()
     }
     
     
