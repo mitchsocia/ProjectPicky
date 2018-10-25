@@ -32,6 +32,8 @@ class ToppingsTableViewController: UITableViewController {
         self.tableView.backgroundColor = #colorLiteral(red: 1, green: 0.9286860824, blue: 0.3978641629, alpha: 1)
     }
     
+    //MARK: TableView Setup
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToppingsItem", for: indexPath)
         let toppingForCell = toppingsCategories[indexPath.section].toppings[indexPath.row]

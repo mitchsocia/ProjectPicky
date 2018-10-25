@@ -15,9 +15,6 @@ protocol PizzaPickerViewControllerDelegate: class {
 class PizzaPickerViewController: UIViewController {
     
     var favoritePizzas: [FavoritePizza] = []
-    var favoritePizza = ""
-    
-//    weak var delegate: PizzaPickerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +38,7 @@ class PizzaPickerViewController: UIViewController {
         let favorite = FavoritePizza(toppings: pizzaToppings)
         favoritePizzas.append(favorite)
         savePizzas()
-//        delegate?.pizzaPickerViewControllerDelegate(self, didFinishAdding: favoritePizza)
-
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ShowAddedFavorites" {
-//            let favoritesViewController = segue.destination as! FavoritesTableViewController
-//        }
-//    }
     
 }
 

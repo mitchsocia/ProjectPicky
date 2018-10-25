@@ -12,16 +12,9 @@ class FavoritesTableViewController: UITableViewController {
     
     var favoritePizzas = [FavoritePizza]()
     
-    //    func pizzaPickerViewController(_ pizzaPickerViewController: PizzaPickerViewController, didAddFavorite favorite: String) {
-    //        favoritePizzas.append(favorite)
-    //    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPizzas()
-//        useLargeTitles()
-        //        print("Documents folder is \(documentsDirectory())")
-        //        print("Data file path is \(dataFilePath())")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,11 +27,7 @@ class FavoritesTableViewController: UITableViewController {
         
         return cell
     }
-    
-//    private func useLargeTitles() {
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//    }
-    
+
 }
 
 extension FavoritesTableViewController {
@@ -49,7 +38,6 @@ extension FavoritesTableViewController {
     }
     
     func dataFilePath() -> URL {
-        //        print(documentsDirectory().appendingPathComponent("Favorites.plist"))
         return documentsDirectory().appendingPathComponent("Favorites.plist")
     }
     

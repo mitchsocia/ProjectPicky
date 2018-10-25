@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     var networkCall = NetworkCall()
     var locations: PizzaLocations?
     var currentCandidateIndex: Int?
