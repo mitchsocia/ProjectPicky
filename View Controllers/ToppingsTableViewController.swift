@@ -9,9 +9,9 @@
 import UIKit
 
 var toppingsCategories = [
-    ToppingCategory(categoryName: "Vegetables", toppings: ["Tomato", "Onion", "Spinach", "Green Olive", "Black Olive", "Mild Pepper", "Green Pepper", "Mushroom"]),
-    ToppingCategory(categoryName: "Meats", toppings: ["Pepperoni", "Ham", "Bacon", "Sausage", "Anchovie", "Chicken"]),
-    ToppingCategory(categoryName: "Misc.", toppings: ["Pineapple", "Pickle"])
+    ToppingCategory(categoryName: "Vegetables", toppings: ["Tomato", "Onion", "Spinach", "Green Olive", "Black Olive", "Mild Pepper", "Green Pepper", "Mushroom", "Jalapeño", "Basil"]),
+    ToppingCategory(categoryName: "Meats", toppings: ["Pepperoni", "Ham", "Bacon", "Ground Beef", "Sausage", "Anchovie", "Chicken", "Salami"]),
+    ToppingCategory(categoryName: "Misc.", toppings: ["Pineapple", "Pickle", "Garlic"])
 ]
 
 var toppingsChoice = [String]()
@@ -39,6 +39,7 @@ class ToppingsTableViewController: UITableViewController {
         let toppingForCell = toppingsCategories[indexPath.section].toppings[indexPath.row]
         cell.textLabel?.text = toppingForCell
         
+        
         if toppingsChoice.contains(toppingForCell) {
             cell.accessoryType = .checkmark
         } else {
@@ -53,6 +54,7 @@ class ToppingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return toppingsCategories[section].toppings.count
     }
     
@@ -62,7 +64,7 @@ class ToppingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+
         return toppingsCategories[section].categoryName
     }
     
